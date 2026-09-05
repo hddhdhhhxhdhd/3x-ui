@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: 3x-ui
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: XUI_USERNAME
+        sync: false
+      - key: XUI_PASSWORD
+        sync: false
+    healthCheckPath: /
+    plan: free
+    autoDeploy: true
